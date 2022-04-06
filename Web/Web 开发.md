@@ -2,7 +2,7 @@
 
 ## 前端*三剑客*
 
-- [[HTML]]
+- [[html]]
 - [[CSS]]
 - [[JavaScript]]
 

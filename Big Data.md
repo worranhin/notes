@@ -27,7 +27,7 @@
 
 1.  acquire
     1.  traditional databases: SQL, query browsers
-    2.  Remote data: Web Services, [[HTML]], XML, RSS
+    2.  Remote data: Web Services, [[html]], XML, RSS
     3.  Text files: use scripting languages to process
     4.  NoSQL storage: Web Services, Programming Interfaces
 2.  prepare
