@@ -1,11 +1,17 @@
 # LaTex 符号集
 
-代码|符号
----|---
+下面是一些常用的 [[LaTex]] 符号的输入方法
+
+|输入|输出|描述
+|---|---|---
+`\infty`|$\infty$
+`\nabla`|$\nabla$
+`\partial`|$\partial$
+`\dot \Phi`|$\dot X$|求导符号
+`\sim`|$\sim$
 `\ge`|$\ge$
 `\le`|$\le$
-`\frac{a}{b}`|$\frac{a}{b}$
+`\frac{a}{b}`|$\frac{a}{b}$|分号
 `\alpha`|$\alpha$
 `\beta`|$\beta$
 `\gamma`|$\gamma$
-`\infty`|$\infty$
