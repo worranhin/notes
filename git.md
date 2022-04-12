@@ -94,6 +94,15 @@
 
 `-p`  删除没用的跟踪分支
 
+### reset
+
+版本回退
+
+```bash
+git reset --hard HEAD^  # 回退到上一个版本
+git reset --hard HEAD~10 # 回退 10 个版本
+```
+
 ## 一些支持 git 的平台
 
 [这个网站](https://git.wiki.kernel.org/index.php/GitHosting) 上罗列了一些支持托管 git 的平台。
@@ -101,3 +110,6 @@
 [log-1]: https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E5%8E%86%E5%8F%B2#log_options
 [log-2]: https://git-scm.com/book/zh/v2/ch00/limit_options
 
+## git 工作流
+
+![[Pasted image 20220412221449.png]]
