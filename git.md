@@ -94,6 +94,15 @@
 
 `-p`  删除没用的跟踪分支
 
+### reset
+
+版本回退
+
+```bash
+git reset --hard HEAD^  # 回退到上一个版本
+git reset --hard HEAD~10 # 回退 10 个版本
+```
+
 ## 一些支持 git 的平台
 
 [这个网站](https://git.wiki.kernel.org/index.php/GitHosting) 上罗列了一些支持托管 git 的平台。
