@@ -15,3 +15,5 @@
 `\alpha`|$\alpha$
 `\beta`|$\beta$
 `\gamma`|$\gamma$
+`\approx`|$\approx$
+`\lim_{x \to 0}`|$$\lim_{x \to 0}$$|极限的写法

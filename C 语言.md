@@ -1,9 +1,37 @@
 ## 数据类型
 
+### 基本数据类型
+
+- int
+- long
+- short
+- unsigned
+- char
+- float
+- double
+- signed
+- _Bool
+- _Complex
+- _Imaginary
+
 ### 字符串和字符
 
 用双引号括起来的为字符串，用单引号括起来的是字符
 如 `'a'` 是一个字符，`"a"` 是由 'a' 和 '\0' 组成
+
+### 复数和虚数
+
+在 C99 支持复数和虚数，包括：
+- 复数
+	- `float_Complex`
+	- `double_Complex`
+	- `long double_Complex`
+- 虚数
+	- `float_Imaginary`
+	- `double_Imaginary`
+	- `long double_Imaginary`
+
+> 包含 <complex.h> 后可以用 `complex` 代替 `_Complex`，用 `imaginary` 代替 `_Imaginary`
 
 ### 数组
 
@@ -126,6 +154,26 @@ printf("%*d", 4, 123);  // []123
 
 ![[Pasted image 20220323164211.png]]
 
+#### 输出不同进制
+
+```c
+printf("dec = %d; octal = %o; hex = %#x\n", x, x, x);
+// 输出十进制、八进制和十六进制，其中 %#x 表示输出 "0x" 前缀。
+```
+
+#### 浮点数
+
+`%e` 表示打印用指数计数法的浮点数
+
+#### 输出类型大小
+
+`%zd` 表示 `size_t` 类型
+
+```c
+printf("size of int is %zd\n", sizeof(int));
+```
+ 
+
 ### 转义字符
 
 ![[NeatReader-1649347150935.png]]
@@ -209,3 +257,50 @@ int main(void)
 ```
 
 > 注意不要忘了 include <stdlib.h> 库
+
+## 头文件
+
+### stdint.h / inttypes.h
+
+- 精确宽度整数类型(exact-width integer type)
+    `int32_t` 表示 32 位的整数类型
+- 最小宽度类型(minimum width type)
+    `int_least8_t` 表示可容纳 8 位的最小的整数类型
+- 最快最小宽度类型(fastest minimum width type)
+  `int_fast8_t` 对 8 位有符号值运算最快的整数类型
+- 最大有符号整数类型
+  `intmax_t`
+- 最大无符号整数类型
+  `uintmax_t`
+
+除了定义类型，该头文件还定义了用于控制输出格式的宏 `PRId32`。
+
+下面是一个例子
+
+```c
+#include <stdio.h>
+#include <inttypes.h>
+
+int main(void)
+{
+	int32_t x32;  // 定义 x
+	printf("x=" PRId32 "\n", x32);  // 正确输出 x
+```
+
+### string.h
+
+#### memchr
+
+```c
+void *memchr(const void *str, int c, size_t n)
+```
+
+在 `str` 的前 `n` 个字符中查找 `c` 。
+
+返回一个指向目标的指针。
+
+#### strtok
+
+[strtok, strtok_s - cppreference.com](https://zh.cppreference.com/w/c/string/byte/strtok)
+
+一个诡异的函数。

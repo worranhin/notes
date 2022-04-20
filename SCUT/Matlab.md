@@ -25,5 +25,13 @@ created: 2021-10-29 16:31:17Z
 bode 波特图
 margin 裕度
 
+## Simulink
+
+- `switch` 可以实现延时功能
+- `product` 乘法
+- `add` 相加
+- `gain` 增益
+
+
 
 
