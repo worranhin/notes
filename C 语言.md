@@ -113,9 +113,59 @@ pp1->x = 1;  // 也可以这样
 ## 输入与输出
 
 ### scanf
+
+获取输入，返回成功读取的项数。检测到文件结尾时，会返回 `EOF`.
+
 ```c
 char s1[10000];
 scanf("%s", s1);
+```
+
+需要注意：  
+`%i`, `%o`, `%x` 均表示有符号整数 `int`;  
+但 `%lo`, `%lx` 表示 `unsigned long`
+
+还有一些特殊的转换说明：  
+- `%jd` : `intmax_t`
+- `%zd` : 表示 `sizeof` 的返回类型
+- `%td` : 两个指针的差值
+
+要让 `%c` 跳过前面的空白，可以在它前面加一个空白：
+```c
+char ch;
+scanf(" %c", &ch);
+```
+
+#### `*` 修饰符
+
+`scanf()` 中的 `*` 修饰符可用于跳过输入：
+```c
+scanf("%*d %*d %d", &n);
+// n = 最后输入的整数
+```
+
+### 其他输入函数
+
+- `getchar()`
+- `fgets()`
+
+### printf
+
+打印字符，返回打印字符的个数
+
+```c
+char *s = "world";
+printf("Hello %s", s);
+```
+
+输入 `double` 时需要用 `%lf`
+
+当字符串太长时可以用这种方式换行：
+
+```c
+printf("Here's the way to "
+	"print a long string");
+// 在 ANSI C 后支持
 ```
 
 ### 更改 printf 输出颜色
@@ -172,11 +222,17 @@ printf("dec = %d; octal = %o; hex = %#x\n", x, x, x);
 ```c
 printf("size of int is %zd\n", sizeof(int));
 ```
- 
 
 ### 转义字符
 
 ![[NeatReader-1649347150935.png]]
+
+### 转换说明
+
+转换说明|输出
+---|---
+`%a`|浮点数、十六进制和 p 计数法
+`%g`|自动选择 `%f` 或 `%e`
 
 ## clock()
 
