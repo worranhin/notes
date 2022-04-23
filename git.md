@@ -135,6 +135,19 @@ $ git revert -m 1 HEAD  # 回退至合并之前
 
 打标签
 
+
+## 常见问题
+
+### git staus 不显示中文
+
+通过设置 `git config --global core.quotePath false` 可解决此问题。
+
+> 关于该配置的描述可参考[Git - git-config Documentation (git-scm.com)](https://git-scm.com/docs/git-config#Documentation/git-config.txt-corequotePath)
+
+#### 参考资料
+[令 Git Status 显示中文_sigmarising的博客-CSDN博客_git status 中文](https://blog.csdn.net/sigmarising/article/details/116976615)
+
+
 ## 一些支持 git 的平台
 
 [这个网站](https://git.wiki.kernel.org/index.php/GitHosting) 上罗列了一些支持托管 git 的平台。
