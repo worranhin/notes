@@ -5,6 +5,10 @@ aliases: [js, JS]
 
 JavaScript 是主要用于 *Web* 的脚本语言。
 
+## Number
+
+`.toFix(n)`: 保留 n 位小数点  
+
 ## Array 数组
 
 ### 属性
@@ -23,13 +27,22 @@ JavaScript 是主要用于 *Web* 的脚本语言。
 `pop()` |弹出最后一个元素  
 `push(newItem)`| 将 newItem 添加至数组中  
 
-## 字符串方法
+## 字符串
+
+```js
+const x = 'world';
+console.log('hello ${x}');  //可以这样在字符串中插入变量
+```
+
+### 方法
 
 ```JavaScript
 "hello".charAt(0); // "h"
 "hello, world".replace("world", "mars"); // "hello, mars"
 "hello".toUpperCase(); // "HELLO"
 ```
+
+`.trim()`: 删除两端空白
 
 ## 类型转换
 
@@ -77,6 +90,18 @@ switch(a) {
         doNothing();
 }
 ```
+
+## 事件
+
+事件默认会向上冒泡，若要阻止冒泡行为可以调用事件的  `.stopPropagation()` 方法，如下所示：
+
+```js
+video.onclick = function(e) {
+  e.stopPropagation();
+  video.play();
+};
+```
+
 
 ## 输入
 
@@ -126,6 +151,21 @@ setTimeout(function mytf() {
 
 当代码执行的时间很**长**时，最好使用递归的 `setTimeout()`
 
+## 客户端存储
+
+### Cookie
+
+Cookie 是一个过时的技术，并不建议使用。需要时可访问该文章了解——[HTTP cookies - HTTP | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies)
+
+### Web Storage
+
+Web Storage 是更现代的存储策略，分为 `localStorage` 和 `sessionStorage`。前者长期有效，后者仅在本次访问有效，退出浏览器后会清除。Web Storage 是通过一个个的键值对实现的：
+
+```js
+localStorage.setItem('name', 'hin');  //将 name 设置为 hin
+let myName = localStorage.getItem('name');  // 得到 hin
+localStorage.removeItem('name');  //移除该键
+```
 
 ## Date() 
 `date = new Date()` 创建一个 Date 对象
@@ -148,30 +188,6 @@ finally{
 
 `throw <Error>` 抛出错误, 可被父级 catch
 
-## `instanceof` 
-
-instanceof是Java中的二元运算符，左边是对象，右边是类；当对象是右边类或子类所创建对象时，返回true；否则，返回false。
-
-## arguments 对象
-
-arguments 对象在函数被调用时自动创建
-
-arguments.length 返回调用函数时的实参个数
-
-## 代码优化
-
-在对象不再使用时赋予 `null` 可有助于减少内存占用
-
-## 技巧
-
-```JavaScript
-//用于判断对象是否存在，若存在则执行后面的方法
-var name = o && o.getName();
-
-//用于缓存，若前面为真则不执行后面的语句
-var name = cachedName || (cachedName = getName());
-```
-
 ## DOM API
 
 - [[Canvas]] 是常用于绘制动画的画布
@@ -184,6 +200,33 @@ var name = cachedName || (cachedName = getName());
 
 [scrollBy]:https://developer.mozilla.org/zh-CN/docs/Web/API/Window/scrollBy
 
+## 从服务器获取数据
+
+有两种方法：
+- XmlHttpRequest(XHR)
+- fetch
+
+XHR 是较传统的兼容性更好的方法，而 fetch 是更现代的方法。fetch 还用到了优雅的 Promise 语法。
+
+## arguments 对象
+
+arguments 对象在函数被调用时自动创建
+
+arguments.length 返回调用函数时的实参个数
+
+## 技巧
+
+```JavaScript
+//用于判断对象是否存在，若存在则执行后面的方法
+var name = o && o.getName();
+
+//用于缓存，若前面为真则不执行后面的语句
+var name = cachedName || (cachedName = getName());
+```
+
+## 代码优化
+
+在对象不再使用时赋予 `null` 可有助于减少内存占用
 
 ## 一些有意思的库
 
