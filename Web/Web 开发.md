@@ -8,15 +8,22 @@
 
 ## 三大前端框架
 
-- React
+- [[React]]
 - [[Vue]]
-- Angular
+- [[Angular]]
 
+## 后端框架
 
-一个有意思的库，里面涵盖许多有趣的库——[sindresorhus/awesome: 😎 Awesome lists about all kinds of interesting topics (github.com)](https://github.com/sindresorhus/awesome#readme)
+- [[Express]]: 基于 [[node.js]] 的后端框架
+- [[Django]]: 基于[[Python]] 语言的开箱即用的后端框架
+- [[Flask]]: 轻量级的 [[Python]] 后端框架
 
-## 一些有意思的框架/库
+## 工具集合
 
-- [[Popper]]  消息框定位引擎
-- [[Bootstrap]]  流行 CSS 框架
+- [[Web 工具集]]
+- [sindresorhus/awesome](https://github.com/sindresorhus/awesome#readme): Github 上的一个 web 库集合
+
+## 学习
+
+[MDN Web Docs (mozilla.org)](https://developer.mozilla.org/zh-CN/): 非常全面的教程
 

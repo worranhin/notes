@@ -91,6 +91,18 @@ switch(a) {
 }
 ```
 
+## 事件
+
+事件默认会向上冒泡，若要阻止冒泡行为可以调用事件的  `.stopPropagation()` 方法，如下所示：
+
+```js
+video.onclick = function(e) {
+  e.stopPropagation();
+  video.play();
+};
+```
+
+
 ## 输入
 
 ```js
@@ -139,6 +151,21 @@ setTimeout(function mytf() {
 
 当代码执行的时间很**长**时，最好使用递归的 `setTimeout()`
 
+## 客户端存储
+
+### Cookie
+
+Cookie 是一个过时的技术，并不建议使用。需要时可访问该文章了解——[HTTP cookies - HTTP | MDN (mozilla.org)](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies)
+
+### Web Storage
+
+Web Storage 是更现代的存储策略，分为 `localStorage` 和 `sessionStorage`。前者长期有效，后者仅在本次访问有效，退出浏览器后会清除。Web Storage 是通过一个个的键值对实现的：
+
+```js
+localStorage.setItem('name', 'hin');  //将 name 设置为 hin
+let myName = localStorage.getItem('name');  // 得到 hin
+localStorage.removeItem('name');  //移除该键
+```
 
 ## Date() 
 `date = new Date()` 创建一个 Date 对象
