@@ -18,3 +18,4 @@
 `\approx`|$\approx$
 `\lim_{x \to 0}`|$$\lim_{x \to 0}$$|极限的写法
 `a \quad b`|$a\quad b$|输入一段 quad 空格
+`\hat{a}`|$\hat{a}$|
