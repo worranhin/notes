@@ -7,21 +7,24 @@
 - [[Bulma]]  更modern 更 小众的 [[css]] 框架
 - [[cowsay]] 在终端打印小牛说话
 - [[createapp.dev]] 生成配置文件
+- [easings.net](https://easings.net/cn) 缓动函数速查表
 - [[Jekyll]]: 一个静态博客构建工具
 - [[Jest]]  [[JavaScript|js]] 测试工具
 - [[JSON Resume]]  一个 JSON 格式的简历生成工具
 - [[Layui]]  一个前端框架（看上去挺老的）
 - [[Lodash]]  一个实用工具库
+- [maptalks - for building 2D/3D maps](https://maptalks.org/)
 - [[Matter.js]]  2D 的物理引擎
 - [[moment]] 一个轻量级的日期格式库 (已停止更新，ES6 有原生支持)
 - [[PhysicsJS]]  旧的2d物理引擎（现在已经停更）
 - [[PixiJS]]  WebGL 渲染器
 - [[Popper]]  消息框引擎
 - [[Three.js]]  3D 物理引擎
-- [[WeUI]]  微信的 UI 库
+- [uiverse.io](https://uiverse.io/) CSS 组件代码复制即用
 - [[Vite]]  新一代前端构件工具
 - [[Vue]]  出名的前端框架
 - [[webpack]]  popular 构件工具
+- [[WeUI]]  微信的 UI 库
 - [[yesno.wtf]]  提供随机 yes / no 的 api
 
 ## H5 游戏开发工具
