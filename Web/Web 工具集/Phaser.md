@@ -102,3 +102,29 @@ this.add.image(0, 0, 'sky').setOrigin(0, 0);
 	- `Phaser.AUTO`
 	- `Phaser.WEBGL`
 	- `Phaser.CANVAS`
+
+## Scene
+
+Scene 是一些游戏对象的逻辑集合，可以更好地管理游戏的各部分。
+
+```js
+class Game extends Phaser.Scene
+{
+	constructor() {
+		super('game');  // 为 Scene 指定一个 key
+	}
+}
+```
+
+### preload
+
+一般用于加载图片、音频等资源
+
+```js
+preload()
+{
+	// 加载一个图片，并命名为 dude
+	this.load.image('dude', 'assets/dude.png');
+}
+```
+

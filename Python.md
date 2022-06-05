@@ -97,6 +97,15 @@ z.conjugate() #返回共轭复数
 
 heapq 堆队列算法，可用于排序
 
+## 问号表达式
+
+Python 中没有像 [[C 语言]] 那样的问号表达式，但可以用简化的 `if-else` 语句实现类似的功能：
+
+```python
+a, b = 1, 2
+max = a if a > b else b
+```
+
 ## 杂项
 
 `range()` 只接受整型数
